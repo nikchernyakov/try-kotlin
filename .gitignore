@@ -63,6 +63,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # IntelliJ IDEA #
+out
 .idea
 *.ipr
 *.iml
