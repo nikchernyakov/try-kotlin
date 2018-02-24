@@ -6,10 +6,9 @@ const val DEFAULT_POSTFIX = "]"
 
 fun <T> Collection<T>.joinToString(
         separator: String = DEFAULT_SEPARATOR,
-        prefix : String = DEFAULT_PREFIX,
-        postfix : String = DEFAULT_POSTFIX
+        prefix: String = DEFAULT_PREFIX,
+        postfix: String = DEFAULT_POSTFIX
     ): String{
-
     val stringBuilder = StringBuilder(prefix)
 
     forEachIndexed { index, element -> stringBuilder
@@ -20,3 +19,10 @@ fun <T> Collection<T>.joinToString(
 
     return stringBuilder.toString()
 }
+
+fun <T> Collection<String>.join(
+        separator: String = DEFAULT_SEPARATOR,
+        prefix: String = DEFAULT_PREFIX,
+        postfix: String = DEFAULT_POSTFIX
+    ): String = joinToString(separator, prefix, postfix)
+
