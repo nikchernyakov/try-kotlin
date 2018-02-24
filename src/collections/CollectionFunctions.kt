@@ -26,3 +26,4 @@ fun <T> Collection<String>.join(
         postfix: String = DEFAULT_POSTFIX
     ): String = joinToString(separator, prefix, postfix)
 
+infix fun Any.to(other: Any) = Pair(this, other)
